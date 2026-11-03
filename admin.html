@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Admin | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin">
+  <nav aria-label="Main"><a href="index.html">View site</a></nav>
+  <main>
+    <section id="gate">
+      <h2>Admin</h2>
+      <form id="loginForm">
+        <label>Passcode <input id="pw" type="password" autocomplete="current-password" required></label>
+        <button class="btn" type="submit">Open admin panel</button>
+        <p id="err" class="err"></p>
+      </form>
+    </section>
+
+    <div id="panel" class="panel" hidden>
+      <h2>Edit portfolio</h2>
+      <p class="hint">1. Edit the fields and press Save to preview in this browser. 2. Press Download data.js, replace <code>js/data.js</code> in your project, then commit and push to GitHub to publish.</p>
+      <div id="forms"></div>
+      <div class="bar">
+        <button class="btn" id="saveBtn" type="button">Save (preview here)</button>
+        <button class="btn alt" id="downloadBtn" type="button">Download data.js</button>
+        <button class="btn alt" id="resetBtn" type="button">Reset to data.js</button>
+        <button class="btn alt" id="logoutBtn" type="button">Log out</button>
+        <span id="status" class="status" role="status"></span>
+      </div>
+    </div>
+  </main>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
